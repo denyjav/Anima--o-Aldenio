@@ -1,0 +1,11 @@
+require "sprite"
+local sprite = require("sprite")
+local sheet = sprite.newSpriteSheet("sheet.png",96,96)
+
+local spriteSet = sprite.newSpriteSet(sheet,1,8)
+sprite.add(spriteSet, "atacar", 1,8,1000,0)
+local instance1 = sprite.newSprite(spriteSet)
+instance1.x = display.contentWidth/2
+instance1.y = display.contentHeight/2
+instance1:prepare("atacar")
+instance1:play()
